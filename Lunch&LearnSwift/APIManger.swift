@@ -78,7 +78,7 @@ class APIManger: NSObject {
                     dealDay.setValue(dealDayDict[key], forKey: key)
                 }
             }
-            
+
         }
         
         return NSSet(array: dealDaysArray)
@@ -101,9 +101,4 @@ class APIManger: NSObject {
         return NSSet(array: specialMutable)
     }
 
-    class func fetchAllLocations(moc: NSManagedObjectContext) -> NSArray? {
-        var fetchRequest: NSFetchRequest = NSFetchRequest(entityName: "Location")
-        
-        return moc.executeFetchRequest(fetchRequest, error: nil)
-    }
 }
